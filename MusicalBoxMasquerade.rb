@@ -1,7 +1,3 @@
-
-puts note(:e7),note(:f7),note(:fs7),note(:g7)
-##| stop
-
 #Musical Box masquerade played in Phantom of The Opera
 #coded for Sonic Pi by Robin Newman August 2023
 #utilises 13 samples of musical box notes which are used to cover the midi range 52 - 103
