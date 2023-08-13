@@ -8,6 +8,6 @@ To make it more realistic the performance starts by playing a sample recording o
 
 I am producing this as a repository so that the folder of samples can be easily included to enable users to have a complete system.
 
-You should locate the samples in a suitable position on your cokmputer and then adjust the path in the program where indicated.
+You should locate the samples in a suitable position on your computer and then adjust the path in the program where indicated.
 
 Robin Newman, August 2023
