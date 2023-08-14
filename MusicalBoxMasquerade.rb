@@ -6,12 +6,13 @@
 #sample offset in folder and rpitch value to apply.
 #the notes for the tune and accompaniment parts are stored in lists a1 and a2
 #corresponding durations in b1 and b2
+#OPTIONS below adjusted to give windup sample but no fadeout by default
 
 ######### adjust next five lines as required ###########
 path="~/Desktop/MusicalBoxMasquerade-main/MusicalBox" #path to sample folder. Adjust as necessary
 repeats = 6 #no of "play throughs" of the tune
 shift = 0 #transpose shift. For this tune range +3 down to -17 will work
-windup = false #set to false to miss out box winding up sample
+windup = true #set to false to miss out box winding up sample
 fade = false #set to false to miss out fadeout, or true for fadeout
 ######### end of user adjustable items ###############
 
