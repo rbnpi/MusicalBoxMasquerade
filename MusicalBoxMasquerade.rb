@@ -7,11 +7,12 @@
 #the notes for the tune and accompaniment parts are stored in lists a1 and a2
 #corresponding durations in b1 and b2
 
-######### adjust next four lines as required ###########
-path="~/Desktop/Samples/MusicalBox/MusicalBox" #path to sample folder. Adjust as necessary
+######### adjust next five lines as required ###########
+path="~/Desktop/MusicalBoxMasquerade-main/MusicalBox" #path to sample folder. Adjust as necessary
 repeats = 6 #no of "play throughs" of the tune
 shift = 0 #transpose shift. For this tune range +3 down to -17 will work
-windup = true #set to false to miss out box winding up sample
+windup = false #set to false to miss out box winding up sample
+fade = false #set to false to miss out fadeout, or true for fadeout
 ######### end of user adjustable items ###############
 
 #nlist calculates which sample to play and at what rate, for note midi range 52 to 103
@@ -106,7 +107,7 @@ with_fx :reverb, room: 0.5,mix: 0.6 do #add a little reverb
     
     repeats.times do |i| #repeat the tune the number of times required
       #reduce the volume on the last repeat (index starts from zero so repeats - 2)
-      control get(:v),amp: 0, amp_slide: 2.5*duration if i == repeats - 2
+      control get(:v),amp: 0, amp_slide: 2.5*duration if i == repeats - 2 and fade == true
       in_thread do
         plarray a1,b1,shift,-0.5 #higher notes panned left
       end
